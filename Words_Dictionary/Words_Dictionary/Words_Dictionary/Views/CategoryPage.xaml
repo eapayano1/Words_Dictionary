@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordsDictionary.Views.CategoryPage"
+             xmlns:Effects="clr-namespace:WordsDictionary.Effects">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*" >
+
+
+            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#f8c700" HasShadow="False" >
+                <StackLayout>
+                    <Label Text="WordsDictionary" FontSize="Large" FontAttributes="Bold" TextColor="#7e6304" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <Entry Grid.Row="1" Grid.Column="0" 
+                   Text="{Binding Word}" 
+                   Style="{StaticResource SearchEntryStyle}"
+                   VerticalOptions="CenterAndExpand">
+                <Entry.Effects>
+                    <Effects:EntryEffect/>
+                </Entry.Effects>
+            </Entry>
+
+            <Button Grid.Row="2" Grid.Column="0" 
+                    Text="Search category"
+                    Command="{Binding GetWordCommand}"
+                    Margin="15, 15, 15, 15" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="10"
+                    VerticalOptions="CenterAndExpand"   
+                    TextColor="#7e6304"
+                    FontAttributes="Bold"
+                    Background="#f8c700"/>
+
+            <Label Grid.Row="3" Grid.Column="0"
+                   Margin="15, 15, 15, 0" 
+                   Text="WordsDictionary Random House Learner's of Speech Â© 2021." FontSize="Small"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
