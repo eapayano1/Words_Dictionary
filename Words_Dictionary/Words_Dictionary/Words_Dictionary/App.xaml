@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordsDictionary.App"
+             xmlns:prism="http://prismlibrary.com">
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="Margin" Value="15, 0, 0, 0" />
+
+            </Style>
+
+            <Style x:Key="TextLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Padding" Value="10,5,0,5"/>
+                <Setter Property="Margin" Value="5,5,0,0"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="SearchEntryStyle" TargetType="Entry">
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="Margin" Value="15,0,0,0"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="Placeholder" Value="Search"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="15, 15, 15, 15" />
+
+            </Style>
+
+            <Style x:Key="ListViewStyle" TargetType="ListView">
+                <Setter Property="Margin" Value="15,0,0,0"/>
+                <Setter Property="SeparatorColor" Value="Gray"/>
+            </Style>
+
+
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
+
+</prism:PrismApplication>
