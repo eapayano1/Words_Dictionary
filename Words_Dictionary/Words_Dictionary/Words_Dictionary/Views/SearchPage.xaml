@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Words_Dictionary.Views.SearchPage"
+             xmlns:Effects="clr-namespace:Words_Dictionary.Effects">
+
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto"  HorizontalOptions="CenterAndExpand">
+            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#f8c700" HasShadow="False">
+                <StackLayout>
+                    <Label Text="WordsDictionary" FontSize="Large" FontAttributes="Bold" TextColor="#7e6304" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Entry Grid.Row="1" Grid.Column="0" 
+                   Placeholder="Insert word here"
+                   Text="{Binding Word}" 
+                   Style="{StaticResource SearchEntryStyle}">
+                <Entry.Effects>
+                    <Effects:EntryEffect/>
+                </Entry.Effects>
+            </Entry>
+            <Button Grid.Row="2" Grid.Column="0" 
+                    Margin="15, 15, 15, 15" 
+                    CornerRadius="10" 
+                    Text="Search" 
+                    TextColor="#7e6304"
+                    FontAttributes="Bold"
+                    Command="{Binding WordCommand}"
+                    Background="#f8c700"/>
+
+            <Label Grid.Row="3" Grid.Column="0" 
+                   Text="{Binding Word}" 
+                   Style="{StaticResource TitleLabelStyle}"/>
+
+            <Label Grid.Row="4" Grid.Column="0"
+                   Margin="15, 0, 15, 0" 
+                   Text="WordsDictionary Random House Learner's of Speech © 2021." FontSize="Small"/>
+            <ListView Grid.Row="5" Grid.Column="0" 
+                      Margin="15, 15, 15, 15" 
+                      ItemsSource="{Binding Items}" 
+                      HasUnevenRows="True" IsVisible="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="10, 0, 10, 10">
+                                <Label x:Name="definition" Text="{Binding Definition}" FontAttributes="Italic" FontSize="16" TextColor="Black"/>
+                                <Label x:Name="parofspeech" Text="{Binding PartOfSpeech}" Padding="5" TextColor="Gray"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

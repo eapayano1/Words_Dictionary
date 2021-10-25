@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Unity;
 using System;
+using Words_Dictionary.Views;
 using WordsDictionary.Services;
 using WordsDictionary.ViewModels;
 using WordsDictionary.Views;

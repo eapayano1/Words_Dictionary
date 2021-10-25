@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using Words_Dictionary.Models;
 using WordsDictionary.Models;
 using WordsDictionary.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace WordsDictionary.ViewModels
+namespace Words_Dictionary.ViewModels
 {
     public class SearchViewModel : BaseViewModel
     {    

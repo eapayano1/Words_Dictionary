@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WordsDictionary.Models
+namespace Words_Dictionary.Models
 {
     public class Item
     {
