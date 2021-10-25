@@ -78,14 +78,14 @@ namespace WordsDictionary.Services
             }
         }
 
-        const string APIBaseAddress = "https://wordsapiv1.p.rapidapi.com/";
+       
         public async Task<Category> GetCategory(string word)
         {
             Category categories = new Category();
 
             var httpClient = new HttpClient
             {
-                BaseAddress = new Uri(APIBaseAddress),
+                BaseAddress = new Uri(Config.apiBaseAddress),
                 DefaultRequestHeaders =
                 {
                     { "x-rapidapi-key",  APIKey },
@@ -107,6 +107,7 @@ namespace WordsDictionary.Services
             }
 
             return null;
-        }
+        } 
+
     }
 }
